@@ -5,3 +5,6 @@
   }
     
 }
+input::first-letter {
+  text-transform: capitalize
+}
