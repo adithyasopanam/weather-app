@@ -1,4 +1,8 @@
 
+$(document).ready(function () {
+    let date=new Date();
+        document.getElementById("current").innerHTML=date;
+});
 function fun(){
     let city=document.getElementById("city").value;
     if(city==""){
@@ -7,7 +11,6 @@ function fun(){
     }
     else{
         document.getElementById("output").innerHTML=city.toUpperCase();
-        let date=new Date();
-        document.getElementById("date").innerHTML=date;
+        
     }
 }
