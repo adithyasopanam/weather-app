@@ -17,40 +17,11 @@ function fun() {
     alert("Invalid city name format");
     return false;
   } else {
-    document.getElementById("output").innerHTML = c;
+    document.getElementById("output").innerHTML = city.toUpperCase();
     getTimeByCity(c);
   }
 }
-async function getTimeByCity(c) {
-  try {
-    const apiKey = "8b0c29901ff0c775637771c32a818fde";
 
-    // Step 1: Get city coordinates
-    const geoResponse = await fetch(
-      `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`
-    );
-    const geoData = await geoResponse.json();
-
-    if (!geoData.length) {
-      document.getElementById("date").innerHTML = "❌ City not found";
-      return;
-    }
-
-    const { lat, lon } = geoData[0];
-
-    // Step 2: Get timezone info using OpenWeatherMap Time Zone API
-    const tzResponse = await fetch(
-      `https://api.openweathermap.org/data/2.5/timezone?lat=${lat}&lon=${lon}&appid=${apiKey}`
-    );
-    const tzData = await tzResponse.json();
-
-    // Step 3: Show local time
-    const dateTime = new Date(tzData.datetime);
-    document.getElementById("date").innerHTML = `${dateTime.toLocaleTimeString()}`;
-  } catch (error) {
-    console.error("Error fetching time:", error);
-  }
-}
 const cityTimeZones = {
       "New York": "America/New_York",
       "Los Angeles": "America/Los_Angeles",

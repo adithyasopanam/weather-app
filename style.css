@@ -8,3 +8,42 @@
 input::first-letter {
   text-transform: capitalize
 }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d98c8c;
+  margin: auto;
+}
+div{
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  background: linear-gradient(to right, #107e99, #a0a0c0);
+  width: 70%;
+  box-shadow: 0 0 10px rgba(79, 20, 97, 0.1);
+}
+.container {
+  text-align: center;
+}
+#output {
+  font-size: 24px;
+  color:rgb(125, 176, 7);
+}
+#date {
+  font-size: 18px;
+  color: #428f03;}
+  input{
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #428f03;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
